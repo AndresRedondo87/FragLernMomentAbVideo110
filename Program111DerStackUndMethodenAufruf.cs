@@ -12,6 +12,24 @@ namespace FragLernMoment_2_AddiereZahlen
             double zweiteZahl;
             double resultat;
 
+            /// Visual Studio (2017) Tipps und tricks 
+            /// -> Gehe zu definition ->beim methode aufruf seine definition direkt springen. [F12]
+            /// -> Alle Verweise suchen -> sehen alle aufrufe von Variablen,Methoden,Klassen..[SHIFT(UMSCHALT) + F12]
+            ///    Es kann limitiert auf dieses aktuelles Dok., aktuelles Projekt, geöffnete Doks... begrentzt aufgerufen sein
+            ///   ...
+            /// ->Code ausschnitte: cw für Console.Writeline zum Beispiel direkt geschrieben zu kriegen.
+            ///   Code Snippets ist auch seine name. Symboll ist so ein leeres Quadrat, mit zweimal tab werden ausgefuehrt
+            ///   http://bit.ly/2U9EqKf
+            ///   ...
+            ///   TABULATIONEN bzw Indentation wird automatisch standarisiert mit 
+            ///   STRG+K, STRG+D
+            ///   bzw STRG+K,D
+            ///   .
+            ///   Kommentieren / unkommentieren via Buttons oben.
+            ///   STRG+K,C     /  STRG+K,U 
+
+
+
             // Zahlen vom Benutzer eingeben lassen
             Console.Write("Bitte gib die erste Zahl ein: ");
             ersteZahlAlsString = Console.ReadLine();
