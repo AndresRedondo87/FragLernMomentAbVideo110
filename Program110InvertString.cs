@@ -6,7 +6,8 @@ namespace FragLernMoment_1_InvertString
     // Selber angepasst - Bedienung, Logik bleibt genau gleich
     class Program
     {
-        static void Main(string[] args)
+
+        static void Main(string[] args)     // angepasste Bedienung
         {
             string text;
             do
@@ -15,32 +16,28 @@ namespace FragLernMoment_1_InvertString
                 Console.WriteLine("Schreiben Sie einen Text um es zu invertieren[ENTER zu beenden]: ");
                 text = Console.ReadLine();
                 string invertText = Invert(text);
-                Console.WriteLine($"Der eingegebener Text:\n" + text + " \n-Invertiert sieht so aus: \n" + invertText);
+                Console.WriteLine($"Der eingegebener Text:\n" + text + " \n-Invertiert sieht so aus: \n" + invertText + Environment.NewLine + Environment.NewLine);
             } while (!String.IsNullOrEmpty(text));
         }
-
-        static void InvertThisText(string TextToInvert)     //in Methode geschoben angepasst
-        {
-            string name = TextToInvert;
-            string invertName = Invert(name);
-            Console.WriteLine(name + " - " + invertName);
-
-            Console.ReadLine();
-
-        }
-
 
 
         //Methode to invert text
         static string Invert(string text)
         {
+            /// Zaidi´s Loesung
             // erzeugt temporäres Feld von chars - wahrscheinlich um das resultat zu speichern
-            char[] myChar = new char[text.Length];
+            //char[] myChar = new char[text.Length];
 
-            for (int i = 1; i <= text.Length; i++)
-            {
-                myChar[text.Length - i] = text[i - 1];
-            }
+            //for (int i = 1; i <= text.Length; i++)
+            //{
+            //    myChar[text.Length - i] = text[i - 1];
+            //}
+
+            //return new string(myChar);
+
+            // Lehrer´s Loesung - er kennt Viele Klassen und Methoden, das macht alles einfacher.
+            char[] myChar = text.ToCharArray();
+            Array.Reverse(myChar);
 
             return new string(myChar);
         }
